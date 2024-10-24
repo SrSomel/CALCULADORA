@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>JAVASCRIPT</title>
+    <meta charset="utf-8">
+    <script>
+        function calcular() {
+            var numeral1 = parseFloat(document.getElementById('numeral1').value);
+            var numeral2 = parseFloat(document.getElementById('numeral2').value);
+            var operacao = document.getElementById('operacao').value;
+            var resultado;
+
+            switch(operacao) {
+                case 'adicao':
+                    resultado = numeral1 + numeral2;
+                    break;
+                case 'subtracao':
+                    resultado = numeral1 - numeral2;
+                    break;
+                case 'multiplicacao':
+                    resultado = numeral1 * numeral2;
+                    break;
+                case 'divisao':
+                    resultado = numeral1 / numeral2;
+                    break;
+                default:
+                    resultado = 'Operação inválida';
+            }
+
+            document.getElementById('resultado').innerText = 'Resultado: ' + resultado;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="numeral1" placeholder="Digite o primeiro número">
+    <input type="number" id="numeral2" placeholder="Digite o segundo número">
+
+    <select id="operacao">
+        <option value="adicao">+</option>
+        <option value="subtracao">-</option>
+        <option value="multiplicacao">*</option>
+        <option value="divisao">/</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+
+    <div id="animaisincriveis">
+        <img src="https://media.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif">
+        <img src="https://media.tenor.com/4xP2Px5DeV0AAAAM/dog-toilet.gif">
+    </div>
+</body>
+</html>
+
