@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <title>JAVASCRIPT</title>
     <meta charset="utf-8">
@@ -9,7 +9,6 @@
             var numeral2 = parseFloat(document.getElementById('numeral2').value);
             var operacao = document.getElementById('operacao').value;
             var resultado;
-
             switch(operacao) {
                 case 'adicao':
                     resultado = numeral1 + numeral2;
@@ -26,29 +25,35 @@
                 default:
                     resultado = 'Operação inválida';
             }
-
             document.getElementById('resultado').innerText = 'Resultado: ' + resultado;
+        }
+        
+        function mostrarnome() {
+            var nome = document.getElementById('nome').value;
+            document.getElementById('seunome').innerText = 'Ola ' + nome + ' seu líndô';
         }
     </script>
 </head>
 <body>
     <input type="number" id="numeral1" placeholder="Digite o primeiro número">
     <input type="number" id="numeral2" placeholder="Digite o segundo número">
-
     <select id="operacao">
         <option value="adicao">+</option>
         <option value="subtracao">-</option>
         <option value="multiplicacao">*</option>
         <option value="divisao">/</option>
     </select>
-
     <button onclick="calcular()">Calcular</button>
     <p id="resultado"></p>
-
+    
     <div id="animaisincriveis">
         <img src="https://media.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif">
-        <img src="https://media.tenor.com/4xP2Px5DeV0AAAAM/dog-toilet.gif">
     </div>
+    
+    <input type="text" id="nome" placeholder="Digite o seu nome">
+    <button onclick="mostrarnome()">Enviar</button>
+    <p id="seunome"></p>
+    
+    <img src="https://media.tenor.com/4xP2Px5DeV0AAAAM/dog-toilet.gif">
 </body>
 </html>
-
